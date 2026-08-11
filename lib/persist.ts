@@ -40,7 +40,7 @@ export async function syncPaths(config: Config): Promise<void> {
             continue;
         }
 
-        const payload = createPayload(path, config);
+        const payload = createPayload(path);
 
         if (!exists) {
             await createMediaMTXPath(config, payload);
